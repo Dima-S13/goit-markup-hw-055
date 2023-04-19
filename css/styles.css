@@ -1,4 +1,3 @@
-/* ==================== Components =================== */
 :root {
   --body-text: #434455;
   --background-color: #ffffff;
@@ -98,14 +97,34 @@ a {
   color: var(--second-background-color);
   text-transform: uppercase;
 }
-.active::after{
-content: '';
-background: #404BBF;
-border-radius: 2px;
-content: "";
-position: absolute;
-left: 0;
-bottom: 10px;
+.menu-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--second-background-color);
+  padding: 24px 0 24px;
+  position: relative;
+}
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--selection-color);
+}
+.menu-link.active {
+  color: var(--selection-color);
+}
+.menu-link:hover::after,
+.menu-link:focus::after,
+.active::after {
+  content: "";
+  background-color: var(--selection-color);
+  left: 0;
+  bottom: 1px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-radius: 2px;
+  height: 5px;
 }
 
 .address-menu {
@@ -148,18 +167,6 @@ bottom: 10px;
   width: calc((100% - 72px) / 4);
 }
 
-.menu-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--second-background-color);
-  padding: 24px 0 24px;
-}
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--selection-color);
-}
 .guys-name {
   padding: 32px 0;
   border-radius: 0px 0px 4px 4px;
