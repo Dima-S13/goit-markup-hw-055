@@ -572,7 +572,7 @@ a {
   background-color: var(--background-color);
 }
 
-.close-modal-window {
+.close-btn-modal {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -583,6 +583,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #e7e9fc;
+  background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.close-btn-modal:hover,
+.close-btn-modal:focus {
+  background-color: var(--selection-color);
+}
+.close-btn-modal:hover .close-btn-icon,
+.close-btn-modal:focus .close-btn-icon {
+  fill: var(--background-color);
 }
