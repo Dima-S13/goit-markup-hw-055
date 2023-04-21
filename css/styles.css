@@ -110,21 +110,17 @@ a {
 .menu-link:focus {
   color: var(--selection-color);
 }
-.menu-link.active {
-  color: var(--selection-color);
-}
-.menu-link:hover::after,
-.menu-link:focus::after,
+
 .active::after {
   content: "";
   background-color: var(--selection-color);
   left: 0;
-  bottom: -1px;
+  margin-top: 20px;
   display: block;
   position: absolute;
   width: 100%;
   border-radius: 2px;
-  height: 5px;
+  height: 4px;
 }
 
 .address-menu {
@@ -444,7 +440,6 @@ a {
 .footer-links {
   display: flex;
   text-decoration: none;
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -536,12 +531,11 @@ a {
 }
 .overlay-text {
   font-size: 16px;
+  line-height: 24px;
   color: var(--background-color);
-  text-align: center;
-  font-size: 16px;
 }
-.wraper:hover .overlay,
-.wraper:focus .overlay {
+.cards-link:hover .overlay,
+.cards-link:focus .overlay {
   transform: translateY(0);
   transform: scale(1);
   opacity: 1;
